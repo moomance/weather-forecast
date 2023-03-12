@@ -1,0 +1,308 @@
+
+
+//variables
+$avenir:'Avenir', 'Montserrat', 'Nunito', 'Mulish';
+$padding: 0rem 10.125rem;
+
+
+//fonts
+@font-face {
+    font-family:'Avenir';
+    src: url('../../assets/Font/AvenirNextLTPro-Regular.otf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../../assets/Font/AvenirNextLTPro-Demi.otf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../../assets/Font/AvenirNextLTPro-Bold.otf') format('truetype');
+    font-weight: 700;
+    font-style: bold;
+  }
+
+
+// global
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $avenir;
+}
+h1 {
+  color: #FFFFFF;
+  font-size: 48px;
+  font-weight: 500;
+  padding: 0;
+  padding-bottom: 0;
+}
+h3 {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+}
+h4 {
+  font-size: 14px;
+  color: #444444;
+  font-weight: 500;
+}
+h5 {
+  font-size: 11px;
+  color: #999999;
+  font-weight: 400;
+}
+
+
+// navigation 
+
+.navigation {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding;
+
+  &__logo {
+
+    width: 150px;
+    height: 27px;
+
+    &-link {
+      display: flex;
+      justify-content: left;
+    }
+
+
+  }
+
+  &__list {
+    font-family: $avenir;
+    font-size: 13px;
+    align-items: center;
+    list-style: none;
+    display: flex;
+  }
+
+  &__item {
+
+    font-weight: 600;
+    margin-right: 2.5rem;
+    
+
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #333333;
+  }
+
+  &__button {
+    background-color: #1458DC;
+    color: white;
+    border-style: none;
+    font-family: $avenir;
+    font-weight: 500;
+    font-size: 13px;
+    border-radius: 5px;
+
+    width: 110px;
+    padding: 0.5rem;
+
+  }
+}
+
+
+
+
+
+
+
+.hero {
+  width: 100%;
+  height:736px;
+  background-image: url("/Assets/hero/Miami-campus.png");
+  background-position: center;
+  background-size: cover;
+  padding: $padding;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  &__title {
+    color: #FFFFFF;
+
+    margin-bottom: 15px;
+    padding-bottom: 0;
+  }
+  &__line {
+    width: 50px;
+    height: 5px;
+    background-color: #FDCE07;
+    margin-bottom: 20px;
+  }
+  &__card {
+    background-color: #343F5E;
+    width: 394px;
+    height: 254px;
+    padding:1.8rem 2.7rem ;
+    border-radius: 5px;
+  }
+  &__subheader {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+}
+.campuses {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &__button {
+    color: white;
+    margin: 0;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    align-self: center;
+    cursor: pointer;
+    width: 9rem;
+    height: 3rem;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1.3rem;
+    &--active {
+      background-color: #1458DC;
+      border-style: none;
+    }
+  }
+}
+.weather {
+  &__card {
+    width: 464px;
+    height: 430px;
+    margin-top: 1.3rem;
+    padding: 1.1rem 1.75rem;
+    background-color: #F7F7F7;
+    border-radius: 5px;
+  }
+  &__campus {
+    align-self: center;
+    margin-left: 0.5rem;
+  }
+  &__current {
+    display: flex;
+    padding: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 9.875rem;
+    background-image: url("./Assets/hero/weather-background.png");
+    background-size: cover;
+    border-radius: 5px;
+    &-info {
+      display: flex;
+      width: 100%;
+      height: 30px;
+      justify-content: space-between;
+      align-content: center;
+      align-items: center;
+    }
+    &-temperature {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      font-size: 60px;
+    }
+    &-time {
+      margin-left: 190px;
+    }
+  }
+  &__location{
+    width: 18px;
+    height: 18px;
+  }
+  &__predictions {
+    width:435px;
+    height: 260px;
+    margin: 0;
+    flex-wrap: wrap;
+    &-container {
+      display: flex;
+      width: 100%;
+      height: 230px;
+      justify-content: space-between;
+    }
+    &-icon {
+      width: 4rem;
+      height: 3.5rem;
+      margin-right: 0.3rem;
+      padding-right: 0.5rem;
+    }
+    &-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.9rem;
+      height: 4rem;
+      background-color: #FFFFFF;
+      border-radius: 5px;
+      margin: 0.9rem 0;
+    }
+    &-status {
+      display: block;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    &-state {
+      margin: 0.3rem;
+    }
+    &-time {
+      margin: 0.3rem;
+    }
+    &-temperature {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      color: #FDCE07;
+      font-weight: 500;
+    }
+  }
+}
+.suntime {
+  background-color: white;
+  width: 8.3rem;
+  height: 6.3rem;
+  border-radius: 5px;;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  &:first-child {
+    margin-bottom: 1.2rem;
+  }
+  &__container {
+    margin: 0.9rem 0rem;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+  }
+  &__image {
+    width: 5.3rem;
+    height: 4.3rem;
+    margin-top: 0.3rem;
+  }
+
+  &__time {
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+}
